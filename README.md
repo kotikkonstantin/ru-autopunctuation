@@ -58,26 +58,26 @@ Used hyperparameters you can find in *checkpoints* folder.
 ## Let's see how it restores data transcripts:
 
 + Example input from test data:
-![](.README_images/2.png)
+[ ![](.README_images/2.png ) ](.README_images/2.png )
 
 
 + Punctuation and casing restored: 
-![](.README_images/3.png)
+[ ![](.README_images/3.png ) ](.README_images/3.png )
 
 
 + Ideal GT:
-![](.README_images/4.png)
+[ ![](.README_images/4.png ) ](.README_images/4.png )
 
 
 ## Let's see how it restores non-domain data (zero-shot learning)
 It will be a medical text example (provided by [N.N. Burdenko Neurosurgery National Medical Research Center](https://www.nsi.ru/)) 
 + Example input:
-![](.README_images/7.png)
+[ ![](.README_images/7.png ) ](.README_images/7.png )
 
 + Punctuation and casing restored: 
-![](.README_images/8.png)
+[ ![](.README_images/8.png ) ](.README_images/8.png )
 
 
 + Ideal GT:
-![](.README_images/9.png)
+[ ![](.README_images/9.png ) ](.README_images/9.png )
 
