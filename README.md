@@ -81,3 +81,8 @@ It will be a medical text example (provided by [N.N. Burdenko Neurosurgery Natio
 + Ideal GT:
 [ ![](.README_images/9.png ) ](.README_images/9.png )
 
+
+### See how it looks when it was fine-tuned on Russian medical abstracts of ["РИНЦ"](https://elibrary.ru/) papers
+This data also was provided by  [N.N. Burdenko Neurosurgery National Medical Research Center](https://www.nsi.ru/)
+
+**See results/comparison_results_table.xlsx**
