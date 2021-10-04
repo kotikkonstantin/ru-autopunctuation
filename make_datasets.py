@@ -1,7 +1,7 @@
 import re
 from sklearn.model_selection import train_test_split
 import string
-from typing import Dict, List, Optional, Text, Tuple
+from typing import Dict, List, Optional, Pattern, Text, Tuple
 
 TOKEN_RE = re.compile(r'-?\d*\.\d+|[a-zа-яё]+|-?\d+|\S', re.I)
 
@@ -13,7 +13,7 @@ punctuation_enc = {
 }
 
 
-def tokenize_text_simple_regex(txt: str, regex: re.Pattern, min_token_size: int = 0) -> List[str]:
+def tokenize_text_simple_regex(txt: str, regex: Pattern, min_token_size: int = 0) -> List[str]:
     """Tokenize text with simple regex
     Args:
         txt: text to tokenize
