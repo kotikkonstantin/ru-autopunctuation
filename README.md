@@ -13,13 +13,11 @@ The supported punctuation signs: **period, comma, and question.**
 + direct decoding (to get human-readable transcript)
 + use embeddings from Transformer-based encoder layers instead of use LM logits (to decrease dimension in front of FC)
 
-Please, reach me regarding the model checkpoints. 
-
 # Web App
 ## How you can launch (up to you)
 1. `bash bin/build_run_container.sh <USED PORT> <CONTAINER NAME>` 
 2. `bash flask_app_launch.sh <USED PORT>`
-3. `flask run` (this choice use default 5000 port)
+3. `flask run` (this choice uses default 5000 port)
 ## How to send requests
 ```http request
 POST http://0.0.0.0:5000/predict
