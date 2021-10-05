@@ -33,7 +33,7 @@ Content-Type: application/json # in Python requsets package it corresponds to re
   ]
 }
 ```
-And response will be look like:
+And response will look like:
 ```json
 {
   "output": [
