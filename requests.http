@@ -1,0 +1,38 @@
+GET http://0.0.0.0:11112/healthcheck
+###
+
+POST http://0.0.0.0:11111/predict
+Content-Type: application/json # in Python requsets package it corresponds to request.content_type
+
+{
+  "corpus":
+  [
+    "привет как дела",
+    "здравствуйте как обратиться в поддержку ну знаете беда случилась закончились средства а нужно восстановить подписку как быть что делать"
+  ]
+}
+###
+
+POST http://0.0.0.0:11112/predict
+Content-Type: application/json # in Python requsets package it corresponds to request.content_type
+
+{
+  "corpus":
+  [
+    "привет как дела",
+    "здравствуйте как обратиться в поддержку ну знаете беда случилась закончились средства а нужно восстановить подписку как быть что делать"
+  ]
+}
+###
+
+POST http://0.0.0.0:5000/predict
+Content-Type: application/json # in Python requsets package it corresponds to request.content_type
+
+{
+  "corpus":
+  [
+    "привет как дела",
+    "здравствуйте как обратиться в поддержку ну знаете беда случилась закончились средства а нужно восстановить подписку как быть что делать"
+  ]
+}
+###
