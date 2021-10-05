@@ -13,18 +13,63 @@ The supported punctuation signs: **period, comma, and question.**
 + direct decoding (to get human-readable transcript)
 + use embeddings from Transformer-based encoder layers instead of use LM logits (to decrease dimension in front of FC)
 
+Please, reach me regarding the model checkpoints. 
+
+# Web App
+## How you can launch (up to you)
+1. `bash bin/build_run_container.sh <USED PORT> <CONTAINER NAME>` 
+2. `bash flask_app_launch.sh <USED PORT>`
+3. `flask run` (this choice use default 5000 port)
+## How to send requests
+```http request
+POST http://0.0.0.0:5000/predict
+Content-Type: application/json # in Python requsets package it corresponds to request.content_type
+
+{
+  "corpus":
+  [
+    "привет как дела",
+    "здравствуйте как обратиться в поддержку ну знаете беда случилась закончились средства а нужно восстановить подписку как быть что делать"
+  ]
+}
+```
+And response will be look like:
+```json
+{
+  "output": [
+    "Привет. Как дела?",
+    "Здравствуйте. Как обратиться в поддержку. Ну, знаете, беда случилась, закончились средства, а нужно восстановить подписку. Как быть, что делать?"
+  ]
+}
+```
 # Repository structure
 
 ------------------------
 ```
     .
+    ├── bin
+        ├── build_run_container.sh   <- build and run container
+        ├── flask_app_launch.sh      <- run flask web app
+        ├── run_container.sh         <- run container (when you have already built contariner)
     ├── checkpoints          <- folder to keep experiments artifacts
     ├── datasets             <- folder to keep train/valid/test datasets
+    ├── results              <- folder with results reports
+    ├── web_app              <- web app package
     ├── base.py              <- auxiliary functions: initialize random seed, device choice 
+    ├── .dockerignore        
+    ├── .flaskenv
+    ├── .gitignore
     ├── data.py              <- make target, prepare datasets for training
-    ├── model.py             <- form model architecture 
-    ├── train.py             <- train-eval loop
+    ├── dockerd-entrypoint.sh
+    ├── Dockerfile
     ├── inference.py         <- perfom punctuation restored transcripts
+    ├── make_datasets.py     <- make labeled tokens
+    ├── model.py             <- form model architecture 
+    ├── train.py             <- train-eval loop 
+    ├── tests.py             <- unit tests (TODO)
+    ├── requests.http        <- set of http-requests. It's useful to use in Pycharm 
+    ├── requirements.txt     <- packages and libraries requirements 
+    ├── web_app_run.py       <- .py script to launch Flask web app
     └── README.md
 ```
 
