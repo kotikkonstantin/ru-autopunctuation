@@ -13,6 +13,8 @@ The supported punctuation signs: **period, comma, and question.**
 + direct decoding (to get human-readable transcript)
 + use embeddings from Transformer-based encoder layers instead of use LM logits (to decrease dimension in front of FC)
 
+Please, don't hesitate to reach me if you have some questions or suggestions.
+
 # Web App
 ## How you can launch (up to you)
 1. `bash bin/build_run_container.sh <USED PORT> <CONTAINER NAME>` 
