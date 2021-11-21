@@ -92,6 +92,9 @@ And response will look like:
 
 
 ## Modeling
+
+### Visualization for target preparing:
+ ![](.README_images/target.png)
 Used hyperparameters you can find in *checkpoints* folder.
 
 ### Metrics values on the validation dataset
