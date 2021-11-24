@@ -17,7 +17,7 @@ Please, don't hesitate to reach me if you have some questions or suggestions.
 
 # Web App
 ## How you can launch (up to you)
-1. `bash bin/build_run_container.sh <USED PORT> <CONTAINER NAME>` 
+1. `bash bin/build_run_container.sh <USED PORT> <CONTAINER_EXPOSED_PORT> <CONTAINER NAME>` 
 2. `bash flask_app_launch.sh <USED PORT>`
 3. `flask run` (this choice uses default 5000 port)
 ## How to send requests
