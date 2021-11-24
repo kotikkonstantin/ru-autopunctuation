@@ -16,10 +16,12 @@ ENV TOKENIZERS_PARALLELISM "false"
 
 ENV TASK_COMMAND "serve"
 
+ARG CONTAINER_EXPOSED_PORT
+ENV USED_PORT $CONTAINER_EXPOSED_PORT
+
 COPY dockerd-entrypoint.sh /usr/local/bin/dockerd-entrypoint.sh
 RUN chmod +x /usr/local/bin/dockerd-entrypoint.sh
 
-EXPOSE 80
 
 ENTRYPOINT ["/usr/local/bin/dockerd-entrypoint.sh"]
 #CMD ["python3", "app.py" ]
