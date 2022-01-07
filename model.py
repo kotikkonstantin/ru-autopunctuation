@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from transformers import BertModel, BertConfig
+from transformers import BertModel, BertForMaskedLM, BertConfig
 
 
 class BertPunc(nn.Module):
@@ -9,9 +9,12 @@ class BertPunc(nn.Module):
         super(BertPunc, self).__init__()
 
         model_config = BertConfig.from_pretrained(config['name_or_path'])
-        model_config.output_hidden_states = True
 
-        self.bert = BertModel.from_pretrained(config['name_or_path'], config=model_config)
+        if config['mode']['name'] == 'lm_logits':
+            self.bert = BertForMaskedLM.from_pretrained(config['name_or_path'], config=model_config)
+        else:
+            model_config.output_hidden_states = True
+            self.bert = BertModel.from_pretrained(config['name_or_path'], config=model_config)
         self.bert_vocab_size = config['tokenizer_vocab_size']
         self.config = config
 
